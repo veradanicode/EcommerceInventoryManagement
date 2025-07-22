@@ -1,7 +1,6 @@
 const readline = require("readline");
 const { MongoClient } = require("mongodb");
-const uri = "mongodb+srv://veradanicode:veradani360@cluster0.3huay.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-const client = new MongoClient(uri);
+const client = new MongoClient(process.env.MONG_URI);
 
 const rl = readline.createInterface({
   input: process.stdin,
